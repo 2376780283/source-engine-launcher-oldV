@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest 
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    
+    <application 
+        android:allowBackup="true"      
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:extractNativeLibs="true" 
+        android:icon="@mipmap/icon" 
+        android:roundIcon="@mipmap/icon" 
+        android:label="@string/srceng_app_name" 
+        android:supportsRtl="true" 
+        android:usesCleartextTraffic="true"
+        android:theme="@style/AppTheme.FullScreen">
+        
+        <activity 
+            android:name=".MainActivity" 
+            android:theme="@style/AppTheme.FullScreen"
+            android:exported="true">
+         <intent-filter>
+                <action 
+                    android:name="android.intent.action.MAIN" />
+                <category 
+                    android:name="android.intent.category.LAUNCHER" />
+         </intent-filter>
+            
+         </activity>
+        
+        <activity
+            android:name=".DirchActivity"
+            android:exported="true"
+            android:launchMode="singleTask" 
+            android:windowSoftInputMode="adjustResize|stateHidden">
+         <intent-filter>
+                <action 
+                   android:name="android.intent.action.DIRCH" />
+                <category
+                  android:name="android.intent.category.DEFAULT" />
+         </intent-filter>
+        
+        </activity>
+        
+        <activity 
+            android:name="org.libsdl.app.SDLActivity"
+            android:configChanges="layoutDirection|locale|orientation|uiMode|screenLayout|screenSize|smallestScreenSize|keyboard|keyboardHidden|navigation"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/AppTheme.FullScreen">
+           <intent-filter>
+                <action android:name="org.libsdl.app.SDLActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+          
+            </intent-filter>
+            
+        </activity>
+         <service 
+            android:name="zzh.source.hl2.UpdateService" 
+            android:stopWithTask="false" />
+        
+        <meta-data 
+            android:name="android.max_aspect" 
+            android:value="9999.0" />
+        
+        <meta-data 
+            android:name="android.allow_multiple_resumed_activities" 
+            android:value="true" />
+           <meta-data
+                android:name="android.windowLayoutInDisplayCutoutMode"
+                android:value="shortEdges" />
+
+            <meta-data
+             android:name="android.windowFullscreen"
+                android:value="true" />
+    </application>
+</manifest>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     android:layout_height="match_parent"
+     android:layout_width="match_parent"
+     android:id="@+id/coordinator">
+  <zzh.ImprovemView
+    android:id="@+id/followImageView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" />
+   
+    <LinearLayout
+         android:layout_height="match_parent"
+         android:orientation="vertical"
+         android:layout_width="match_parent">
+        <Button
+            android:id="@+id/btnCenter"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/down"
+            android:layout_gravity="top|center_horizontal"
+            android:text="" />
+
+        <Button
+             android:layout_height="0dp"
+             android:id="@+id/btnAdditional"
+             android:gravity="center_vertical"
+             android:layout_width="0dp" />
+    
+    </LinearLayout>
+  
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

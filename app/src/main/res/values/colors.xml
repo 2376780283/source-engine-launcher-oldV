@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <color name="black">#FF000000</color>
+    <color name="white">#80808080</color>
+    <color name="hl_color">#F79A10</color>
+    <color name="bilibili_pink">#F8659A</color>
+    <color name="spin_color">#3F3F3F</color>
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="apple_switch_track_color">#C8C8C8</color>
+    <color name="apple_switch_thumb_color">#FFFFFF</color>
+    <!-- 其他颜色定义 -->  
+</resources>
+

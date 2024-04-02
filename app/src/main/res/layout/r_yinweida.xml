@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_height="50dp"
+     android:layout_width="250dp"
+     android:padding="0dp">
+
+    <LinearLayout
+         android:layout_height="match_parent"
+         android:layout_width="match_parent"
+         android:orientation="horizontal">
+
+        <LinearLayout
+             android:layout_height="match_parent"
+             android:layout_width="3dp"
+             android:background="#F00"
+             android:orientation="horizontal">
+
+        </LinearLayout>
+
+        <LinearLayout
+             android:layout_height="match_parent"
+             android:layout_width="match_parent"
+             android:background="@color/spin_color"
+             android:padding="5dp"
+             android:orientation="horizontal">
+
+            <FrameLayout
+                 android:layout_height="match_parent"
+                 android:layout_width="40dp"
+                 android:background="#1C1C1A"
+                 android:layout_marginLeft="15dp">
+
+                <FrameLayout
+                     android:layout_height="match_parent"
+                     android:layout_width="40dp"
+                     android:background="@drawable/ic_launcher">
+
+                </FrameLayout>
+
+            </FrameLayout>
+
+            <LinearLayout
+                 android:layout_height="match_parent"
+                 android:layout_width="match_parent"
+                 android:orientation="vertical">
+
+                <TextView
+                     android:layout_height="wrap_content"
+                     android:layout_width="wrap_content"
+                     android:textSize="13sp"
+                     android:layout_marginLeft="6dp"
+                     android:text="source engine" />
+
+                <TextView
+                     android:layout_height="wrap_content"
+                     android:layout_width="wrap_content"
+                     android:textSize="12sp"
+                     android:layout_marginLeft="7dp"
+                     android:text="SDL runing" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

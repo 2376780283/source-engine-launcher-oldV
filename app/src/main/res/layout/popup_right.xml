@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     android:layout_height="match_parent"
+     android:layout_width="match_parent"
+     android:background="@drawable/cl"
+     android:id="@+id/coordinator">
+
+    <LinearLayout
+         android:layout_height="match_parent"
+         android:layout_width="match_parent"
+         android:orientation="vertical">
+
+        <LinearLayout
+             android:layout_height="wrap_content"
+             android:layout_width="250dp"
+             android:background="@drawable/cl"
+             android:padding="16dp"
+             android:orientation="vertical">
+
+            <TextView
+                 android:layout_height="wrap_content"
+                 android:layout_width="wrap_content"
+                 android:textSize="13sp"
+                 android:textColor="@android:color/white"
+                 android:id="@+id/text_app_title"
+                 android:text="source engine"
+                 android:textStyle="bold" />
+
+            <ImageView
+                 android:layout_height="64dp"
+                 android:layout_width="64dp"
+                 android:src="@drawable/icon"
+                 android:layout_marginTop="8dp"
+                 android:id="@+id/image_app_logo" />
+
+            <TextView
+                 android:layout_height="wrap_content"
+                 android:layout_width="wrap_content"
+                 android:textSize="12sp"
+                 android:textColor="@android:color/white"
+                 android:id="@+id/text_user_info"
+                 android:text="options" />
+
+            <LinearLayout
+                 android:layout_height="wrap_content"
+                 android:layout_width="match_parent"
+                 android:orientation="horizontal">
+
+                <LinearLayout
+                     android:layout_height="35dp"
+                     android:layout_gravity="center_vertical"
+                     android:layout_width="35dp"
+                     android:background="@drawable/ic_quilt"
+                     android:orientation="vertical">
+
+                </LinearLayout>
+
+                <Button
+                     android:layout_height="wrap_content"
+                     android:layout_width="wrap_content"
+                     android:text="back"
+                     android:id="@+id/backbutton"
+                     android:layout_gravity="bottom" />
+
+            </LinearLayout>
+              <LinearLayout
+                 android:layout_height="wrap_content"
+                 android:layout_width="match_parent"
+                 android:orientation="horizontal">
+
+                <LinearLayout
+                     android:layout_height="35dp"
+                     android:layout_width="35dp"
+                    android:layout_gravity="center_vertical"
+                     android:background="@drawable/places_ic_clear"
+                     android:orientation="vertical">
+
+                </LinearLayout>
+
+            <Button
+                 android:layout_height="wrap_content"
+                 android:layout_width="wrap_content"
+                 android:onClick="exit"
+                 android:text="EXIT SDL"
+                 android:id="@+id/exitbutton"
+                 android:layout_gravity="bottom" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,70 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'zzh.source.hl2'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "zzh.source.hl2"
+        minSdk 28
+        targetSdk 33
+        versionCode 20240331
+        versionName "1.17.40"
+        renderscriptTargetApi 19
+        renderscriptSupportModeEnabled true
+
+        ndk {
+            //noinspection ChromeOsAbiSupport
+            abiFilters "armeabi-v7a", "arm64-v8a"
+        }
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation 'com.github.iielse:switchbutton:1.0.4'
+ /*属性	描述
+hasShadow	是否显示按钮阴影
+primaryColor	开启状态背景色
+primaryColorDark	开启状态按钮描边色
+offColor	关闭状态描边色
+offColorDark	关闭状态按钮描边色
+shadowColor	按钮阴影色
+ratioAspect	按钮宽高形状比率(0,1] 不推荐大幅度调整
+isOpened	初始化默认状态
+*/
+    implementation 'com.github.Dimezis:BlurView:version-2.0.3'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.8.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'io.github.molihuan:pathselector:1.1.16'
+    implementation 'androidx.annotation:annotation:1.3.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
+    implementation 'androidx.appcompat:appcompat:1.3.0'
+    implementation 'com.github.mmin18:realtimeblurview:1.2.1'
+    implementation files('libs/gltfio.jar')
+    implementation files('libs/c.jar')
+    implementation files('libs/glb.jar')
+    implementation files('libs/mat.jar')
+    
+    implementation 'jp.wasabeef:blurry:4.0.0'
+    implementation 'androidx.appcompat:appcompat:1.3.0'
+    implementation 'com.google.android.material:material:1.4.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+}
